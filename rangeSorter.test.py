@@ -1,15 +1,15 @@
 import unittest
 import rangeSorter
 
-class TypewiseTest(unittest.TestCase):
+class rangeSorterTest(unittest.TestCase):
 
-    def smallest_possible_failing_test(self):
+    def test_smallest_possible_failing(self):
         self.assertNotEqual(rangeSorter.sort_in_ranges([4,5]),"4-5, 2")
 
-    def smallest_possible_passing_test(self):
+    def test_smallest_possible_passing(self):
         self.assertEqual(rangeSorter.sort_in_ranges([4,5]),"3-5,2\n10-12,0\n")
 
-    def not_int_range_test(self): # just for 100% coverage
+    def test_not_int_range(self): # just for 100% coverage
         self.assertEqual(rangeSorter.sort_in_ranges([0]),"3-5,0\n10-12,0\n")
 
     # def test_range_class_methods(self): # Not necesary for 100% coverage 
