@@ -1,4 +1,4 @@
-class range():
+class range_class():
     def __init__(self, minValue, maxValue):
         self.minValue = minValue
         self.maxValue = maxValue
@@ -23,9 +23,9 @@ class range():
 #     n = text_file.write(string)
 #     text_file.close()
 
-ranges = [range(3,5),range(10,12)]
 
 def sort_in_ranges(toSort_lst):
+    ranges = [range_class(3,5),range_class(10,12)]
     csvText = ""
     for range in ranges:
         range.analyze_list(toSort_lst)
